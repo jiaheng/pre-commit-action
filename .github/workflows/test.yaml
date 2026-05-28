@@ -45,7 +45,7 @@ jobs:
         uses: ./
       - name: Install and run pre-commit hooks (called workflow).
         if: github.repository != 'ScribeMD/pre-commit-action'
-        uses: ScribeMD/pre-commit-action@main
+        uses: jiaheng/pre-commit-action@main
         with:
           bump: ${{ inputs.bump }}
       - name: Send Slack notification with job status.
