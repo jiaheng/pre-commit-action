@@ -150,7 +150,7 @@ runs:
             output_stream.write(f"DOCKER_IMAGE={docker_image}\n")
       shell: python
     - name: Cache Docker images.
-      uses: ScribeMD/docker-cache@e53d303afe42d4c1ebeeb8ab0b4c47eba1bbf3e0 # 0.3.6
+      uses: jiaheng/docker-cache@main
       with:
         key: ${{ steps.megalinter.outputs.DOCKER_IMAGE }}
     - name: Cache pre-commit hooks.
